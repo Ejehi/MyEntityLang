@@ -11,7 +11,7 @@ class Customer(models.Model):
 
 	def __unicode__(self):
 		return "Customer: {0}".format(self.name)
-			
+				
 
             
 

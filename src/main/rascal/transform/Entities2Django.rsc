@@ -1,4 +1,4 @@
-module compile::Entities2Django
+module transform::Entities2Django
 
 import AST;
 import String;
@@ -22,14 +22,14 @@ public str entity2django(Entity e) {
             '	<attribute2django(attr)>
             '<}>
 			'<for (id <- e.entity_identlist) {>
-            '<idents2django(e, id)>
+            '	<idents2django(e, id)>
             '<}>
             ";
 }
 
 public str idents2django(Entity e, EntityIdent id) {
-	return "	def __unicode__(self):
-			'		return \"<e.entity_name>: {0}\".format(self.<id.attribute_name>)
+	return "def __unicode__(self):
+			'	return \"<e.entity_name>: {0}\".format(self.<id.attribute_name>)
 			";
 }
 

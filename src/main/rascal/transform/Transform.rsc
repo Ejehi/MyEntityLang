@@ -1,4 +1,4 @@
-module compile::Transform
+module transform::Transform
 
 import ParseTree;
 
@@ -7,7 +7,7 @@ import Implode;
 
 import Prelude;
 
-import compile::Entities2Django;
+import transform::Entities2Django;
 
 
 public void generateDjango() {
