@@ -1,0 +1,15 @@
+test Ok1 [[ 
+module crm
+entity Customer
+ name : String
+ description : String
+ website : String
+ repr name
+end
+entity Contact
+ name : String
+ phone : String
+ email : String
+ customer -> Customer
+end
+]]
